@@ -1,0 +1,13 @@
+{
+  "header": {
+    "title": "Memento Mori Calendar"
+  },
+  "quote": {
+    "text": "No es que tengamos poco tiempo, sino que perdemos mucho.",
+    "author": "Séneca"
+  },
+  "birthInput": {
+    "resetLabel": "Reiniciar fecha"
+  }
+}
+

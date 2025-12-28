@@ -5,3 +5,5 @@ export * from './Week';
 export * from './LifeTimeGrid';
 export * from './BirthInput';
 export * from './YearLabel';
+export * from './LanguageSwitcher';
+export * from './ButtonLangSwith';
