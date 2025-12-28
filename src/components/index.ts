@@ -7,3 +7,4 @@ export * from './BirthInput';
 export * from './YearLabel';
 export * from './LanguageSwitcher';
 export * from './ButtonLangSwith';
+export * from './GithubLink';
