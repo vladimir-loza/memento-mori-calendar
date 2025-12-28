@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@layer base {
+
+  body {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+}
+
+/* Estilos CSS nativos solo para pseudo-elementos del input type="date" que no se pueden estilizar con Tailwind */
+.birth-date-input::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.birth-date-input::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
+.birth-date-input::-webkit-datetime-edit-text {
+  color: white;
+}
+
+.birth-date-input::-webkit-datetime-edit-month-field,
+.birth-date-input::-webkit-datetime-edit-day-field,
+.birth-date-input::-webkit-datetime-edit-year-field {
+  color: white;
+}
+
+.birth-date-input::-webkit-datetime-edit-month-field:focus,
+.birth-date-input::-webkit-datetime-edit-day-field:focus,
+.birth-date-input::-webkit-datetime-edit-year-field:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+/* Estilos para Firefox */
+.birth-date-input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.birth-date-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
