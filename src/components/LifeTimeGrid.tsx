@@ -7,6 +7,7 @@ import {
   BIRTH_DATE_KEY,
 } from "../constants";
 import { getWeeksFilledForYear } from "../utils/dates.utils";
+import { useLocalStorage } from "../hooks";
 
 const getInitialBirthDate = (): Date | null => {
   try {
@@ -22,16 +23,18 @@ const getInitialBirthDate = (): Date | null => {
 };
 
 export const LifeTimeGrid = () => {
-  const [currentBirthDate, setcurrentBirthDate] = useState<Date | null>(() =>
-    getInitialBirthDate()
-  );
+  const [currentBirthDate, setcurrentBirthDate] = useState<Date | null>(getInitialBirthDate);
+  const { setItemByKey } = useLocalStorage();
+
+  const handleBirthDateChange = (date: Date | null) => {
+    setcurrentBirthDate(date);
+    setItemByKey(BIRTH_DATE_KEY, date);
+  };
 
   return (
     <div className="flex flex-col mx-auto w-full items-center">
       <BirthInput
-        onChange={(date) => {
-          setcurrentBirthDate(date);
-        }}
+        onChange={handleBirthDateChange}
         value={currentBirthDate}
       />
       <div className="relative w-full flex justify-center">
