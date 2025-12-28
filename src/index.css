@@ -5,6 +5,15 @@
   body {
     font-family: 'Cormorant Garamond', Georgia, serif;
   }
+
+  html {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  html::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 @layer utilities {
@@ -13,7 +22,6 @@
   }
 }
 
-/* Estilos CSS nativos solo para pseudo-elementos del input type="date" que no se pueden estilizar con Tailwind */
 .birth-date-input::-webkit-calendar-picker-indicator {
   filter: invert(1);
   cursor: pointer;
@@ -42,7 +50,6 @@
   color: white;
 }
 
-/* Estilos para Firefox */
 .birth-date-input::-moz-placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
