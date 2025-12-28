@@ -12,7 +12,8 @@ export const BirthInput = ({ onChange, value }: Props) => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const dateString = e.target.value;
     if (dateString) {
-      const newDate = new Date(dateString);
+      const [year, month, day] = dateString.split('-').map(Number);
+      const newDate = new Date(year, month - 1, day);
       onChange(newDate);
     } else {
       onChange(null);
