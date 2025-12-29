@@ -22,7 +22,7 @@ export const ButtonLangSwitch = ({
     <button
       onClick={() => onChange(languageKey)}
       className={cn(
-        "w-10 h-10 rounded-full flex items-center justify-center text-sm font-semibold transition-all duration-200 cursor-pointer",
+        "size-6 sm:size-10 text-xs sm:text-sm rounded-full flex items-center justify-center font-semibold transition-all duration-200 cursor-pointer opacity-70 hover:opacity-100",
         isActive ? ACTIVE_CLASS : INACTIVE_CLASS
       )}
       aria-label={ariaLabel}

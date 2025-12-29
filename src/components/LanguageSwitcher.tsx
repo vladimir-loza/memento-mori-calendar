@@ -12,7 +12,7 @@ export const LanguageSwitcher = () => {
   const currentLanguage = i18n.language;
 
   return (
-    <div className="fixed top-4 right-4 flex gap-2 z-50">
+    <div className="fixed top-2 right-2 sm:right-4 sm:top-4 flex gap-2 z-50">
       <ButtonLangSwitch
         onChange={(lang) => changeLanguage(lang)}
         isActive={currentLanguage === 'es'}
