@@ -4,7 +4,7 @@ export const Quote = () => {
   const { t } = useTranslation();
 
   return (
-    <blockquote className="w-full sm:w-1/3 mx-auto text-white">
+    <blockquote className="w-full px-2 sm:px-0 sm:w-1/3 mx-auto text-white">
       <p className="text-base-content text-lg text-foreground italic text-center">
         <em>
           &quot;{t('quote.text')}&quot;
