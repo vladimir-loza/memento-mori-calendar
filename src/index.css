@@ -21,39 +21,3 @@
     font-family: 'Cormorant Garamond', Georgia, serif;
   }
 }
-
-.birth-date-input::-webkit-calendar-picker-indicator {
-  filter: invert(1);
-  cursor: pointer;
-  opacity: 0.7;
-  transition: opacity 0.2s;
-}
-
-.birth-date-input::-webkit-calendar-picker-indicator:hover {
-  opacity: 1;
-}
-
-.birth-date-input::-webkit-datetime-edit-text {
-  color: white;
-}
-
-.birth-date-input::-webkit-datetime-edit-month-field,
-.birth-date-input::-webkit-datetime-edit-day-field,
-.birth-date-input::-webkit-datetime-edit-year-field {
-  color: white;
-}
-
-.birth-date-input::-webkit-datetime-edit-month-field:focus,
-.birth-date-input::-webkit-datetime-edit-day-field:focus,
-.birth-date-input::-webkit-datetime-edit-year-field:focus {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: white;
-}
-
-.birth-date-input::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.birth-date-input::placeholder {
-  color: rgba(255, 255, 255, 0.5);
-}

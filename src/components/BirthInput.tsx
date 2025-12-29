@@ -1,4 +1,3 @@
-import { useTranslation } from 'react-i18next';
 import { formatDateForInput } from "../utils";
 
 type Props = {
@@ -7,7 +6,6 @@ type Props = {
 }
 
 export const BirthInput = ({ onChange, value }: Props) => {
-  const { t } = useTranslation();
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const dateString = e.target.value;
@@ -20,19 +18,15 @@ export const BirthInput = ({ onChange, value }: Props) => {
     }
   };
 
-  const handleReset = () => {
-    onChange(null);
-  };
-
   return (
     <div className="mb-4 flex items-center gap-2 relative">
       <input
         type="date"
         value={formatDateForInput(value)}
         onChange={handleChange}
-        className="font-display font-thin tracking-wide bg-transparent border-none border-b border-white/30 text-white py-2 w-full text-base outline-none transition-[border-color] duration-200 focus:border-white/70 birth-date-input"
+        className="font-display font-thin tracking-wide bg-[#393E46]/50 border-none border-b border-white/30 text-white  w-full text-base outline-none transition-[border-color] duration-200 focus:border-white/70 birth-date-input rounded-md px-2 py-1"
       />
-      <button
+      {/* <button
         type="button"
         onClick={handleReset}
         className="bg-transparent border-none text-white cursor-pointer p-2 flex items-center justify-center opacity-70 transition-opacity duration-200 shrink-0 hover:opacity-100 focus:outline-none focus:opacity-100"
@@ -44,7 +38,7 @@ export const BirthInput = ({ onChange, value }: Props) => {
           className="w-5 h-5"
           style={{ filter: 'invert(1)' }}
         />
-      </button>
+      </button> */}
     </div>
   )
 }
