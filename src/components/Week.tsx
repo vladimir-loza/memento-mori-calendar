@@ -9,7 +9,7 @@ export const Week = ({ isFilled = false }: Props) => {
   return (
     <div 
       className={cn(
-        "size-[5px] sm:size-[6px] rounded-[1px] transition-all duration-200",
+        "size-1.25 sm:size-1.5 rounded-[1px]",
         isFilled 
           ? FILLED_WEEK_BG 
           : EMPTY_WEEK_BG

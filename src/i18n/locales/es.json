@@ -8,6 +8,8 @@
   },
   "birthInput": {
     "resetLabel": "Reiniciar fecha"
+  },
+  "githubLink": {
+    "ariaLabel": "Ver repositorio en GitHub"
   }
 }
-

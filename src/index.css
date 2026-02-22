@@ -1,9 +1,18 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Cormorant Garamond Fallback';
+  src: local('Georgia');
+  ascent-override: 90%;
+  descent-override: 24%;
+  line-gap-override: 0%;
+  size-adjust: 108%;
+}
+
 @layer base {
 
   body {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'Cormorant Garamond', 'Cormorant Garamond Fallback', Georgia, serif;
   }
 
   html {
@@ -18,6 +27,6 @@
 
 @layer utilities {
   .font-display {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'Cormorant Garamond', 'Cormorant Garamond Fallback', Georgia, serif;
   }
 }
